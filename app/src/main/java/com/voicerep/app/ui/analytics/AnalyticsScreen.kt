@@ -117,8 +117,8 @@ fun AnalyticsScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                val recentVolumes = completedSets.take(7).reversed().map { (it.weight * it.completedReps) }
-                val maxVolume = (recentVolumes.maxOrNull() ?: 100.0).coerceAtLeast(100.0)
+                val recentVolumes: List<Float> = completedSets.take(7).reversed().map { (it.weight * it.completedReps) }
+                val maxVolume: Float = (recentVolumes.maxOrNull() ?: 100f).coerceAtLeast(100f)
 
                 val barColor = MaterialTheme.colorScheme.primary
 
@@ -137,7 +137,7 @@ fun AnalyticsScreen(
                         } else 20.dp.toPx()
 
                         recentVolumes.forEachIndexed { index, vol ->
-                            val barHeight = ((vol / maxVolume) * (canvasHeight * 0.85f)).toFloat()
+                            val barHeight = (vol / maxVolume) * (canvasHeight * 0.85f)
                             val x = spacing + index * (barWidth + spacing)
                             val y = canvasHeight - barHeight
 

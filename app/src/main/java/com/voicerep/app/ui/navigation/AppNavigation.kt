@@ -49,7 +49,7 @@ fun MainAppNavigation(
     Scaffold(
         bottomBar = {
             NavigationBar {
-                ScreenTab.values().forEach { tab ->
+                ScreenTab.entries.forEach { tab ->
                     NavigationBarItem(
                         selected = selectedTab == tab,
                         onClick = { selectedTab = tab },

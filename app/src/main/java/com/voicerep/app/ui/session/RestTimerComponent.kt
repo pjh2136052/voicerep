@@ -65,13 +65,13 @@ fun RestTimerComponent(
                 contentAlignment = Alignment.Center
             ) {
                 CircularProgressIndicator(
-                    progress = { 1f },
+                    progress = 1f,
                     modifier = Modifier.size(160.dp),
                     color = Color.DarkGray.copy(alpha = 0.5f),
                     strokeWidth = 10.dp
                 )
                 CircularProgressIndicator(
-                    progress = { animatedProgress },
+                    progress = animatedProgress,
                     modifier = Modifier.size(160.dp),
                     color = MaterialTheme.colorScheme.secondary,
                     strokeWidth = 10.dp

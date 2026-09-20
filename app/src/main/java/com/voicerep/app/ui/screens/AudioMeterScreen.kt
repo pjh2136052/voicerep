@@ -179,7 +179,7 @@ fun AudioMeterScreen() {
                 Spacer(modifier = Modifier.height(16.dp))
 
                 LinearProgressIndicator(
-                    progress = { animatedMeter },
+                    progress = animatedMeter,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(14.dp)
